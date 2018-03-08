@@ -14,12 +14,14 @@ function initializePage() {
 function onServerResponse(data){
     var labElementId = getLabElementId(data.id);
     var labElement = $(labElementId);
+    console.log(labElement);
+    console.log(labElementId);
     labElement.css({'background': 'yellow'});
 }
 
 
 // Function to format the CSS selector
 function getLabElementId(id){
-    var labElementId = '#lab_' + id;
+    var labElementId = '#lab-' + id;
     return labElementId;
 }
